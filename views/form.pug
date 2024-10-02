@@ -1,0 +1,18 @@
+doctype html
+html(class='h-100')
+    head
+        title Simple form
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css")
+    body(class='d-flex flex-column h-100')
+        .container
+            h1(class='mb-5') Simple form
+            if error
+                .alert.alert-danger= error
+            form(method="POST", action="/3097_form_validation/submit")
+                .form-group
+                    label(for="name") Name:
+                    input.form-control(type="text", id="name", name="name", value=name)
+                .form-group(class='mt-2')
+                    label(for="email") Email:
+                    input.form-control(type="text", id="email", name="email", value=email)
+                button.btn.btn-primary(type="submit" class='mt-4') Send
