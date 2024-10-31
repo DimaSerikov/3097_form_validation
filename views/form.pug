@@ -8,7 +8,7 @@ html(class='h-100')
             h1(class='mb-5') Simple form
             if error
                 .alert.alert-danger= error
-            form(method="POST", action="/3097_form_validation/submit")
+            form(method="POST", action="/submit")
                 .form-group
                     label(for="name") Name:
                     input.form-control(type="text", id="name", name="name", value=name)
